@@ -6,7 +6,7 @@ Projet : Application e-commerce de vente de Jellycat en Next.JS, Les clients peu
 
 
 
-voir la documentation du projet détaillé ici
+voir la documentation du projet détaillé ici :
 
 [YummyLand_Documentation.pdf](https://github.com/user-attachments/files/26332078/YummyLand_Documentation.pdf)
 
