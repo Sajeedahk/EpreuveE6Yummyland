@@ -1,142 +1,78 @@
-# 🌸 YummyLand — Boutique Jellycat
+# EpreuveE6 Projet 1
 
-Site e-commerce rose et doux pour les produits Jellycat (peluches, porte-clés, sacs à dos).
+## Présentation de Yummyland
 
----
-
-## ⚙️ Stack technique
-
-- **Next.js 14** (App Router)
-- **NextAuth.js** (authentification JWT)
-- **Prisma** (ORM)
-- **MySQL** (base de données)
-- **Tailwind CSS** (styles)
-- **bcryptjs** (hashage des mots de passe)
+Projet : Application e-commerce de vente de Jellycat en Next.JS, Les clients peuvent commander des articles comme des doudous / sac à dos  / porte-clés et les admins peuvent ajouter des articles et regarder les commandes réalisées ! 
 
 ---
 
-## 🚀 Installation
+## Fonctionnalités principales
 
-### 1. Installer les dépendances
+Authentification (inscription / connexion / déconnexion)
 
-```bash
-cd yummyland
+Gestion des profils (Modification du mot de passe / email)
+
+Système de Panier ( ajout au panier / suppression du panier / modifier quantité) 
+
+Système Administrateur ( ajout / suppression de produit)
+
+Système de Commande ( utilisateur peut passer une commande et voir l'historique)
+
+---
+
+## Installation et lancement
+
+### Prérequis
+
+MySQL 
+Next.js
+Prisma
+
+### Étapes d'installation
+
+Cloner le projet
+
+```
+git clone https://github.com/Sajeedahk/EpreuveE6Yummyland
+cd EpreuveE6Yummyland
+```
+```
 npm install
-```
-
-### 2. Configurer la base de données
-
-Créer une base MySQL nommée `yummyland` :
-
-```sql
-CREATE DATABASE yummyland CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
-### 3. Configurer les variables d'environnement
-
-Copier `.env.example` en `.env` et remplir les valeurs :
-
-```bash
-cp .env.example .env
-```
-
-Modifier `.env` :
-
-```env
-DATABASE_URL="mysql://VOTRE_USER:VOTRE_MOT_DE_PASSE@localhost:3306/yummyland"
-NEXTAUTH_SECRET="une_chaine_aleatoire_longue_et_secrete"
-NEXTAUTH_URL="http://localhost:3000"
-```
-
-> Pour générer un secret : `openssl rand -base64 32`
-
-### 4. Créer les tables avec Prisma
-
-```bash
 npx prisma db push
 ```
-
-### 5. Peupler la base avec les produits
-
-```bash
-npm run prisma:seed
+Dans le terminal laragon 
 ```
-
-### 6. Lancer le serveur
-
-```bash
+cd EpreuveE6Yummyland
+mysql -u root
+source bdd.sql
+```
+Puis sur le terminal Visual Studio Code
+```
 npm run dev
 ```
 
-Ouvrir http://localhost:3000 🎉
+Puis accéder à l'application :
+
+Ouvrir un navigateur web
+Aller à l'adresse http://localhost:3000
 
 ---
 
-## 📁 Structure du projet
-
-```
-yummyland/
-├── app/
-│   ├── api/
-│   │   ├── auth/
-│   │   │   ├── [...nextauth]/route.ts   ← NextAuth
-│   │   │   └── register/route.ts        ← Inscription
-│   │   ├── cart/
-│   │   │   ├── route.ts                 ← GET/POST panier
-│   │   │   └── [itemId]/route.ts        ← PATCH/DELETE article
-│   │   └── products/route.ts            ← GET produits
-│   ├── cart/page.tsx                    ← Page panier
-│   ├── login/page.tsx                   ← Page connexion
-│   ├── register/page.tsx               ← Page inscription
-│   ├── shop/page.tsx                    ← Boutique
-│   ├── layout.tsx                       ← Layout global
-│   └── page.tsx                         ← Page d'accueil
-├── components/
-│   ├── Navbar.tsx
-│   └── SessionProvider.tsx
-├── lib/
-│   ├── auth.ts                          ← Config NextAuth
-│   └── prisma.ts                        ← Client Prisma
-├── prisma/
-│   ├── schema.prisma                    ← Schéma BDD
-│   └── seed.ts                          ← Données de démo
-└── .env.example
-```
+## Modèle Conceptuel de Données (MCD)
+<img width="866" height="617" alt="YummylandMCD" src="https://github.com/user-attachments/assets/45544733-00bd-4b3e-a4fb-90312a33db82" />
 
 ---
 
-## 🗄️ Schéma base de données
+## Diagramme de Cas d'Utilisation
 
-| Table      | Description                          |
-|------------|--------------------------------------|
-| `User`     | Utilisateurs (nom, email, password)  |
-| `Product`  | Produits Jellycat (3 catégories)     |
-| `Cart`     | Panier lié à chaque utilisateur      |
-| `CartItem` | Articles du panier (produit + qté)   |
+<img width="1017" height="725" alt="YummylandUseCase" src="https://github.com/user-attachments/assets/5be3465b-3fbb-41b7-884c-29f9c592bd35" />
 
 ---
 
-## 🎯 Fonctionnalités
+## Technologies utilisées
 
-- ✅ Inscription avec création automatique du panier
-- ✅ Connexion / Déconnexion (JWT)
-- ✅ Boutique filtrée par catégorie
-- ✅ Ajout au panier depuis la boutique
-- ✅ Modification de quantité dans le panier
-- ✅ Suppression d'article du panier
-- ✅ Total du panier calculé en temps réel
+Next.js
+Prisma
+MySQL
+JSON Web Tokens (JWT) pour l'authentification
 
----
-
-## 🛠️ Commandes utiles
-
-```bash
-# Voir la BDD dans un interface visuelle
-npx prisma studio
-
-# Régénérer le client Prisma après modif du schema
-npx prisma generate
-
-# Réinitialiser et repeupler
-npx prisma db push --force-reset && npm run prisma:seed
-```
