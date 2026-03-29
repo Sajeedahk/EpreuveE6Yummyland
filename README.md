@@ -4,6 +4,11 @@
 
 Projet : Application e-commerce de vente de Jellycat en Next.JS, Les clients peuvent commander des articles comme des doudous / sac à dos  / porte-clés et les admins peuvent ajouter des articles et regarder les commandes réalisées ! 
 
+
+
+voir la documentation du projet détaillé ici
+[YummyLand_Documentation.pdf](https://github.com/user-attachments/files/26332078/YummyLand_Documentation.pdf)
+
 ---
 
 ## Fonctionnalités principales
@@ -82,3 +87,5 @@ MySQL (base de données)
 Tailwind CSS (styles)
 
 bcryptjs (hashage des mots de passe)
+
+
