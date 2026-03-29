@@ -72,8 +72,13 @@ Aller à l'adresse http://localhost:3000
 ## Technologies utilisées
 
 Next.js
+
 NextAuth.js (authentification JWT)
+
 Prisma (ORM)
+
 MySQL (base de données)
+
 Tailwind CSS (styles)
+
 bcryptjs (hashage des mots de passe)
