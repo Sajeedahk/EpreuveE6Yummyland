@@ -64,7 +64,8 @@ Aller à l'adresse http://localhost:3000
 ---
 
 ## Modèle Conceptuel de Données (MCD)
-<img width="866" height="617" alt="YummylandMCD" src="https://github.com/user-attachments/assets/45544733-00bd-4b3e-a4fb-90312a33db82" />
+<img width="866" height="606" alt="Capture d&#39;écran 2026-03-31 142737" src="https://github.com/user-attachments/assets/d64194c2-3134-452d-94fd-6826a0793760" />
+
 
 ---
 
