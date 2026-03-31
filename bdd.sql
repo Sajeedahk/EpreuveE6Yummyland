@@ -29,4 +29,5 @@ INSERT INTO Product (name, description, price, image, category) VALUES
 ('Sac lapin',           'Un sac a dos lapin tout doux avec de longues oreilles adorables.', 64.99, '/images/lapin2sac.jpg', 'SAC_A_DOS'),
 ('Sac Bartholomew',     'Un sac a dos inspire de Bartholomew, doux et parfait pour les calins en voyage.', 64.99, '/images/ours2sac.jpg', 'SAC_A_DOS');
 
-
+INSERT INTO User (name, email, password, role, createdAt) VALUES
+('Admin', 'sajeedah@gmail.com', '$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ADMIN', '2024-06-01 10:00:00');
