@@ -65,7 +65,9 @@ Aller à l'adresse http://localhost:3000
 
 pour se connecter a l'espace ADMIN : 
 
-identifiant : sajeedah@gmail.com  \t         Mot de passe : Password
+identifiant : sajeedah@gmail.com 
+
+Mot de passe : Password
 
 ---
 
